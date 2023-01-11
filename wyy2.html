@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        #topu{/*上边缘全框*/
+            width:100%;
+            background-color:rgb(38, 37, 37);
+            z-index: 0;
+        }
+        #topd{
+            z-index: 0;
+            position:relative;
+            height:30px;
+            width:100%;
+            background-color: rgb(209, 35, 35);
+            color:rgba(255, 255, 255, 0.975);
+            display:flex;
+            flex-direction: row;
+            
+        }
+        #top{ 
+            z-index: 2;
+            color:rgba(255, 255, 255, 0.452);
+            display:flex;
+            flex-direction: row;
+        }
+        #logo{
+           
+            width:auto;
+            height:72px;
+        }
+        li{
+            display:block;
+            position:relative;
+            list-style: none;
+            float:left;
+            margin:auto 20px;
+        }
+        .li2{
+            left:200px;
+            font-size:7px;
+            margin:auto 30px;
+            bottom:10px;
+        }
+        ul{
+            display:flex;
+            flex-shrink: 0;
+            
+        }
+        input{
+            display:flex;
+            flex-shrink: 0;
+            width:180px;
+            height:40px;
+            border-radius: 20px;
+            text-align: right;
+            position:relative;
+            top: 20px;
+            right:20px;
+            z-index: 0;
+        }
+        #searchpic{
+            width:auto;
+            height:30px;
+            position:relative;
+            top:27px;
+            z-index: 1;
+            left:22px;
+        }
+        #create{
+            position:relative;
+            top:20px;
+            display:flex;
+            flex-shrink: 0;
+            width:100px;
+            height:40px;
+            border-radius: 25px;
+            border:2px solid rgb(255, 255, 255,0.452);
+            line-height: 40px;
+        }
+        
+    </style>
+    <div id="all">
+        <div id="topu">
+        <div id="top">
+            <div >
+                <img id="logo"src="/project/pic/logo.jpg" >
+            </div>
+            <ul>
+                <li>发现音乐</li>
+                <li>我的音乐</li>
+                <li>关注</li>
+                <li>商城</li>
+                <li>音乐人</li>
+                <li>下载客户端</li>
+            </ul>
+            <div id="box"style="display:flex;flex-direction:row">
+                <img id="searchpic"src="/project/pic/search.jpg">
+                <input type="search" name="search" placeholder="音乐/视频/电台/用户">
+                <div id="create">创作者中心</div>
+        </div>
+        </div>
+        <div id="topd">
+            <ul>
+                <li class="li2" >推荐</li>
+                <li class="li2">排行榜</li>
+                <li class="li2">歌单</li>
+                <li class="li2">主播电台</li>
+                <li class="li2">歌手</li>
+                <li class="li2">新碟上架</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function (){
+
+        }
+    </script>
+    
+</body>
+</html>
