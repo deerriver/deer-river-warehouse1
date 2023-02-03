@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/project2/wyy/function/search2.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <style>
+        li{
+            float:left;
+            width:70px;
+            text-align: center;
+
+        }
+    </style>
+    <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp找到<span id="Count"></span>首单曲</h4>
+    <div style="width:100%;height:30px">
+        <ul style="list-style-type: none;">
+            <li>单曲</li>
+            <li>歌手</li>
+            <li>专辑</li>
+            <li>视频</li>
+            <li>歌词</li>
+            <li>主播电台</li>
+            <li>用户</li>
+        </ul>
+    </div>
+    <hr>
+    <div style="display:flex;flex-direction:column;">
+        <divstyle="width:100%">
+            <span style="position:absolute;left:40px">音乐标题</span>
+            <span style="position:relative;left:40%">歌手</span>
+            <span style="position:relative;left:50%">专辑</span>
+            <span style="position:relative;left:60%">时长</span>
+           
+        </div>
+        <div id="song1"onclick="music(this.id)" style="width:100%;background-color: rgba(0, 0, 0, 0.128);">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song2"onclick="music(this.id)" style="width:100%">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song3"onclick="music(this.id)" style="width:100%;background-color: rgba(0, 0, 0, 0.128);">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song4"onclick="music(this.id)" style="width:100%;">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song5"onclick="music(this.id)" style="width:100%;background-color: rgba(0, 0, 0, 0.128);">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song6"onclick="music(this.id)" style="width:100%;">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song7"onclick="music(this.id)" style="width:100%;background-color: rgba(0, 0, 0, 0.128);">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song8"onclick="music(this.id)" style="width:100%;">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song9"onclick="music(this.id)" style="width:100%;background-color: rgba(0, 0, 0, 0.128);">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song10"onclick="music(this.id)" style="width:100%;">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song11"onclick="music(this.id)" style="width:100%;background-color: rgba(0, 0, 0, 0.128);">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song12"onclick="music(this.id)" style="width:100%;">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song13"onclick="music(this.id)" style="width:100%;background-color: rgba(0, 0, 0, 0.128);">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+        <div id="song14"onclick="music(this.id)" style="width:100%;">
+            <span class="name" style="position:absolute;left:40px">音乐标题</span>
+            <span class="artist" style="position:relative;left:30%">歌手</span>
+            <span class="albumname" style="position:relative;left:40%">专辑</span>
+            <span class="time"style="position:relative;left:50%">时长</span>
+            <span class="id" style="display:none">id</span>
+        </div>
+    </div>
+    <audio controls id="audio">
+        <source id="song"src="" typr="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+    </audio>
+    <script>
+        
+
+        function send_songname2(name){
+            console.log(name);
+            search2(name);
+            
+           
+        }
+    </script>
+</body>
+</html>

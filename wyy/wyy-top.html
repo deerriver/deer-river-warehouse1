@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+    <!-- 搜索功能 -->
+    <script src="/project2/wyy/function/search.js"></script>
+    <!-- 热搜框 -->
+    <script src="/project2/wyy/function/hot.js"></script>
+    <!-- 登录 更换头像 -->
+    <script src="/project2/wyy/function/login.js"></script>
+</head>
+<body>
+    <!--上边框红色 -->
+     <div id="topframe" style="width:100%;height:60px;background-color: rgb(230, 66, 66);position: absolute;">
+        <!-- 网易云logo -->
+        <img id="logo" src="/project2/wyy/pic/logo2.jpg" style="position:relative;left:10px;top: 7px;height: 40px;width:auto;">
+        <!-- 返回上一个url 可能可以用history.back实现-->
+        <button style="position:relative;bottom:7px;left:65px;width:25px;height:25px;background-color: rgb(212, 39, 39);border-radius:100%;border-color: rgb(212, 39, 39);">
+            <img id="leftarrow" src="/project2/wyy/pic/leftarrow.jpg" style="width:13px;height:auto;position:relative;right:2px">
+        </button>
+        <!-- 加载历史列表中下一个url 可能可以用history.forward实现 -->
+        <button style="position:relative;bottom:7px;left:70px;width:25px;height:25px;background-color: rgb(212, 39, 39);border-radius:100%;border-color: rgb(212, 39, 39);">
+            <img id="rightarrow" src="/project2/wyy/pic/rightarrow.jpg" style="width:12px;height:auto;position:relative;right:2px;top:1px;">
+        </button>
+        <div style="position:relative;left:200px;bottom:25px;">
+                <!-- 搜索框 -->
+            <img id="research2" onclick="search()" src="/project2/wyy/pic/search2.jpg" style="height:20px;width:auto;position:relative;left:100px;border-radius: 20px;z-index: 1;">
+            <input id="research" onclick="hot()" type="text" autocomplete="off" placeholder="搜索" style="background-color: rgb(212, 39, 39);border-radius: 20px;position:relative;bottom:7px;left:75px;height:20px;text-indent:20px;border:1px solid rgb(230, 66, 66);">
+        </div>
+        <div style="position:relative;bottom:55px;left:70%;">
+            <img onclick="login()" src="/project2/wyy/pic/avatar.jpg" style="border-radius:50%;width:30px;height:30px;">
+            <h6 id="h6"style="position:relative;bottom:45px;left:35px;color:azure;font-size: 10px;">未登录</h6>
+        </div>
+        </div>
+</body>
+</html>

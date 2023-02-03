@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <iframe id="iframeLeft" name="iframeLeft" frameborder="1" src="/project2/wyy/wyy-left.html"scrolling="no"></iframe>
+    <iframe id="iframeRight" name="iframeRight" frameborder="1" src="/project2/wyy/wyy-content/wyy-content-findmusic.html" scrolling="no"></iframe>
+    <style>
+        #iframeLeft{
+        position:absolute;
+        left:0;
+        width: 200px;
+        height:100%;
+        overflow: auto;}
+        #iframeRight{
+            position: absolute;
+            right: 0;
+            left:200px;
+           
+            width:100%;
+            height:100%;
+            overflow: auto;
+        }
+    </style>
+    <script>
+        
+        
+        function send_songname1(name){
+            console.log(name);
+            var iframeRight =document.getElementById("iframeRight");
+            console.log(iframeRight)
+            iframeRight.src="http://127.0.0.1:5500/project2/wyy/wyy-content/wyy-content-search.html";
+            iframeRight.onload=function(){
+                window.frames["iframeRight"].send_songname2(name);
+            }//一定要加载出来新框架才能获取里面的函数和元素 这个点很重要！！！
+            
+            
+        }
+    </script>
+</body>
+</html>
