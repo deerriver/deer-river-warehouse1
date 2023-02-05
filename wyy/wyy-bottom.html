@@ -5,8 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="/project2/wyy/function/search4.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
 </head>
 <body>
+    <style>
+    #songdemo{
+        width:55px;
+        height:55px;
+        border-radius: 10px;
+        position:relative;
+        left:2.5px;
+        top:2.5px
+    }
+    button{
+        width:30px;
+        height:30px;
+        border-radius: 100%;
+    }
+    </style>
+    <div id="bottom"style="display:none;flex-direction:row;width:100%;height:60px;background-color: rgb(240, 241, 245);border-color: rgba(46, 46, 46, 0.292);">
+        <div style="width:70px">
+            <img id="songdemo"src="/project2/wyy/pic/songdemo1.jpg"></img>
+            
+        </div>
+        <div style="width:2000px;display:flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-between">
     
+                <div style="width:200px;display:flex;flex-direction: column;">
+                    <span id="songname"style="position:relative;left:5px;">songname</span>
+                    <span id="artist" style="position:relative;left:5px;">artist</span>
+                </div>
+
+                <div style="width:40%;display:flex;flex-direction: column;">
+                    <div style="display:flex;flex-direction:row;justify-content:space-around;height:35px">
+                        <button id="last">I&#9668</button>
+                        <button id="play"onclick="songplay()">&#9658</button>
+                        <button id="next">&#9658I</button>
+                    </div>
+                    
+                    <div style="display:flex;flex-direction:row;justify-content: center;align-items: flex-start;">
+                        <span style="font-size: 5px;">time</span>
+                        <div style="width:80%;height:2px;background-color: brown;"></div>
+                        <span style="font-size:5px">time2</span>
+                    </div>
+                </div>
+
+                <div style="width: 30px;display:flex;flex-direction:column;justify-content: center;">
+                    
+                <img id="loud"src="/project2/wyy/pic/music.png" onclick="changeloud()" style="width:20px;height:20px;border-radius: 100%;">
+                </div>
+        </div> 
+    </div>
+    
+    <audio controls id="audio1" style="display:none">
+        <source src="" type="audio/ogg">
+      </audio>
+      <script>
+        function songplay(){
+            
+            if(document.getElementById("audio1").paused){
+                document.getElementById("audio1").play();
+                document.getElementById("play").innerHTML='&#9658'
+                
+            }
+            else{
+                document.getElementById("audio1").pause();
+                document.getElementById("play").innerHTML='II'
+            }
+            
+        }
+        function changeloud(){
+            var i=document.getElementById("audio1").muted
+            if(i==false){
+                
+                document.getElementById("loud").src="http://127.0.0.1:5500/project2/wyy/pic/music2.png"
+                document.getElementById("audio1").muted=true;
+            }
+            else{
+                document.getElementById("loud").src="http://127.0.0.1:5500/project2/wyy/pic/music.png"
+                document.getElementById("audio1").muted=false;
+            }
+            
+        }
+      </script>
 </body>
 </html>

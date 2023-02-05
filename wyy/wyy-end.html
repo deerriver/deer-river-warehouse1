@@ -19,7 +19,7 @@
         #iframeContent{
             position: absolute;
             right: 0;
-            bottom: 50px;
+            bottom: 60px;
             top: 60px;
             width:100%;
             height:100%;
@@ -27,7 +27,7 @@
         }
         #iframeBottom{
             position:fixed;
-            height:50px;
+            height:60px;
             bottom:0;
             
             width:100%;
@@ -40,8 +40,8 @@
 <body>
     <div>
         <iframe id="iframeTop" name="iframeTop" frameborder="0" src="/project2/wyy/wyy-top.html" scrolling="no"></iframe>
-        <iframe id="iframeContent" name="iframeContent" frameborder="1" src="/project2/wyy/wyy-content.html"scrolling="no"></iframe>
-        <iframe id="iframeBottom" name="iframeBottom" frameborder="1" src="/project2/wyy/wyy-bottom.html"scorilling="no"></iframe>
+        <iframe id="iframeContent" name="iframeContent" frameborder="0" src="/project2/wyy/wyy-content.html"scrolling="no"></iframe>
+        <iframe id="iframeBottom" name="iframeBottom" frameborder="0" src="/project2/wyy/wyy-bottom.html"scorilling="no"></iframe>
     </div>
       
     <!-- 热搜框 -->
@@ -161,6 +161,10 @@
     function send_songname(name){
         console.log(name);
         window.frames["iframeContent"].send_songname1(name)
+    }
+    function search_songdata(songdata){
+        console.log(songdata);
+        window.frames["iframeBottom"].search_songdata1(songdata);
     }
 </script>
 

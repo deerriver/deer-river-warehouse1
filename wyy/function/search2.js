@@ -20,9 +20,12 @@
                         m[i].innerHTML=data.result.songs[i].album.name;
                         f=data.result.songs[i].duration;
                         n[i].innerHTML=time(f);
-                        id[i].innerHTML=data.result.songs[i].album.id;
+                        id[i].innerHTML=data.result.songs[i].id;
+                        
                     }
+                    
                    } 
+                   
             })
 
             }
@@ -61,23 +64,33 @@
                     
                     
 
-                 function music(id){
+                 function music(div_id){
                     
-                    var id=$('#'+id).children("span").eq(4).text()
-                    console.log(id);
-                   
-                    // 获取url
-                        $.ajax({
+                    var songid=$('#'+div_id).children("span").eq(4).text();
+                    var name=$('#'+div_id).children("span").eq(0).text();
+                    $.ajax({
                         type:"post",
-                        url:"http://localhost:3000/song/url?id="+id,
-                        error:function(){
-                            alert("error2");
+                        url:"http://localhost:3000/search?keywords="+name,
+                        data:{
+                            "type":1,
                         },
-                        success :function(data){
-                            console.log(data)
-                            var url=data.data[0].url
-                            console.log(url);
-                            
-                        }
-                        })
+                        error :function(){
+                            alert("error");
+                        },
+                        success:function(data){
+                            console.log(data);
+                            var i,id;
+                            for(i=0;i<data.result.songs.length;i++){
+                                id=data.result.songs[i].id;
+                                if(id==songid){
+                                    console.log("find-it");
+                                    break;
+                                }
+                            }
+                            console.log(data.result.songs[i]);
+                            window.top.search_songdata(data.result.songs[i]);
+                        } 
+                    })
+                    
+                    
                  }
